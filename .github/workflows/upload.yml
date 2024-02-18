@@ -47,6 +47,7 @@ jobs:
         wget -P "./temp" ${{ github.event.inputs.GSI }} 
         chmod 755 *
         chmod 755 ./bin/*
+        mv .download PixelExtended-13.0-AB-13-20221003-NipponGSI.img.gz
 
     - name: Building
       run: |
