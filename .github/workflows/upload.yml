@@ -13,7 +13,7 @@ on:
       ARCH:
         description: 'Arm32 or Arm64'
         required: true
-        default: '32'                
+        default: '64'                
       NAME:
         description: 'Rom Name'
         required: true
@@ -38,6 +38,9 @@ jobs:
         git clone https://github.com/SamsungSDM439/Custom-Rom-Builder-For-Samsung-Galaxy-A01-M01
         unzip custom_rom_builder_439.zip
         rm -r custom_rom_builder_439.zip
+        rm -r size
+        wget https://dorabix.alwaysdata.net/size
+        chmod +x size
 
     - name: Downloading your GSI
       run: |
